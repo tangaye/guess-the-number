@@ -96,8 +96,25 @@
 @media only screen and (max-width: 412px) {
 
     .page__body {
-        margin: 2rem auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        justify-content: center;
         width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 4rem));
+        grid-auto-rows: minmax(4rem, 4rem);
+        gap: 0.45rem;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+    .page__body {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+        width: 90%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(4rem, 4rem));
         grid-auto-rows: minmax(4rem, 4rem);
