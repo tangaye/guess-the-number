@@ -197,7 +197,7 @@ const isLuckyNumber = number => luckyNumber === number;
  */
 const playAudio = () =>
 {
-	const sources = ['./audio/think-about-your-life.m4a', './audio/basic1plus1.m4a', './audio/cutting-grass.m4a', './audio/dinner-man.m4a', './audio/no-future.m4a', './audio/pregnancy.m4a', './audio/you-are-a-failure.m4a', './audio/you-can-never-make-it-1.m4a']
+	const sources = ['./audio/think-about-your-life.m4a', './audio/basic1plus1.m4a', './audio/cutting-grass.m4a', './audio/dinner-man.m4a', './audio/no-future.m4a', './audio/pregnancy.m4a', './audio/you-are-a-failure.m4a', './audio/you-can-never-make-it-1.m4a', './audio/apostle.m4a', './audio/chants-2.m4a', './audio/funke.m4a', './audio/jesus-is-lord.m4a', './audio/jezuz.m4a', './audio/macdonalds.m4a', './audio/persecuted.m4a', './audio/chants.m4a']
 
 	const randomIndex = Math.floor(Math.random() * sources.length)
 
