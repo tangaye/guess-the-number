@@ -93,14 +93,14 @@
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 412px) {
 
     .page__body {
         margin: 2rem auto;
         width: 80%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(5rem, 5rem));
-        grid-auto-rows: minmax(5rem, 5rem);
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 4rem));
+        grid-auto-rows: minmax(4rem, 4rem);
         gap: 0.45rem;
     }
 }
