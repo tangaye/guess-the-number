@@ -91,3 +91,16 @@
     background-color: #9bbc9b;
     transition-duration: 0.2s;
 }
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+
+    .page__body {
+        margin: 2rem auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 5rem));
+        grid-auto-rows: minmax(5rem, 5rem);
+        gap: 0.45rem;
+    }
+}
