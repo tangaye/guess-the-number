@@ -17,7 +17,7 @@ const handleOnClick = event =>
 	if (targetClassList.includes('body__btn'))
 	{
 
-		if (targetClassList.includes('btn--failure')) return
+		if (targetClassList.includes('btn--failure') || targetClassList.includes('btn--success')) return
 
 		const value = Number(target.dataset.value)
 
@@ -54,11 +54,7 @@ const handleOnClick = event =>
  * @param addClass - class to add
  * @param removeClass - class to remove
  */
-const toggleBtnClass = (el, addClass, removeClass) =>
-{
-	el.classList.remove(removeClass)
-	el.classList.add(addClass)
-}
+const toggleBtnClass = (el, addClass, removeClass) => el.classList.replace(removeClass, addClass)
 
 /**
  * Returns an array of randomized/shuffled numbers from 1 to 100 for the board
@@ -124,7 +120,7 @@ const clearBoard = () => gameCardsEl.innerHTML = "";
  * @return {number}
  */
 const resetLives = () => {
-	lives = 7
+	lives = 2
 	displayLives()
 }
 
@@ -162,14 +158,38 @@ const toggleGame = () =>
 			`))
 }
 
+
 const endGame = () => {
 
-	// play sound
+	toggleResult("Game Over!")
 
-	// make lucky number stand out
+	const buttons = [...document.querySelectorAll('.body__btn')]
+	let successBtn;
 
-	// disable all buttons
+	buttons.forEach(button => {
+
+		if (isLuckyNumber(Number(button.dataset.value)))
+		{
+			// window.scrollTo({ top: button.offsetTop, behavior: 'smooth'});
+			// console.log('scrolling....')
+			successBtn = button
+			button.className = 'body__btn btn btn--success'
+			// button.scrollIntoView({behavior: 'smooth'})
+		}
+		else button.className = 'body__btn btn btn--failure'
+	})
+
+	successBtn.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
 }
+
+
+/**
+ * Returns true if number is lucky number
+ *
+ * @param number
+ * @return {boolean}
+ */
+const isLuckyNumber = number => luckyNumber === number;
 
 
 /**
