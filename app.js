@@ -120,7 +120,7 @@ const clearBoard = () => gameCardsEl.innerHTML = "";
  * @return {number}
  */
 const resetLives = () => {
-	lives = 2
+	lives = 7
 	displayLives()
 }
 
