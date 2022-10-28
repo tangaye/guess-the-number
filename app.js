@@ -40,7 +40,7 @@ const handleOnClick = event =>
 		else
 		{
 			toggleResult('You Win')
-			toggleBtnClass(target, 'btn--success', 'btn--default')
+			endGame()
 		}
 
 		if (lives === 0) endGame()
